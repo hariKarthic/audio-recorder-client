@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {browserHistory} from 'react-router';
 import Loader from '../common/Loader';
+const streamUrl = 'https://s3-eu-west-1.amazonaws.com/react-soundplayer-examples/ksmtk-reborn-edit.mp3';
 
 class ViewStory extends Component {
   constructor (props) {
@@ -37,6 +38,10 @@ class ViewStory extends Component {
                   result.data[0].story.path).replace('uploads/', '')}`}
                         type="audio/wav"/>
               </audio>
+              {/*<AWSSoundPlayer2
+                streamUrl={`http://localhost:3000/api/v1/audio/${String(
+                  result.data[0].story.path).replace('uploads/', '')}`}
+                trackTitle={trackTitle} />*/}
             </div>}
           </section>
         </div>
